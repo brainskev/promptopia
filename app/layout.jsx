@@ -1,6 +1,7 @@
 import '@styles/globals.css';
 import { Children } from 'react';
 import Nav from '@components/Nav';
+import Provider from '@components/Provider';
 
 export const metadata = {
     title: "Promtopis",
@@ -11,6 +12,7 @@ const Rootlayout = ({children}) => {
   return (
     <html lang='en'>
         <body>
+         <Provider>
             <div className='main'>
                 <div className='gradient'></div>
             </div>
@@ -18,6 +20,7 @@ const Rootlayout = ({children}) => {
                 <Nav/>
                 {children}
             </main>
+         </Provider>
         </body>
     </html>
   )
