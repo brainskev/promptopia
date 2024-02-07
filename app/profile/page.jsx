@@ -23,8 +23,8 @@ const myProfile = () => {
       setPosts(data);
     }
 
-    fetchData();
-  }
+    if ()fetchData();
+  }, []):
 
 
     const handleEdit = () => {
@@ -40,7 +40,7 @@ const myProfile = () => {
     <Profile
         name="My"
         desc="Welcome to your personolized profile page"
-        data={[]}
+        data={[posts]}
         handleEdit={handleEdit}
         handleDelete={handleDelete}
      
