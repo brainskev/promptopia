@@ -4,11 +4,15 @@ import { useState } from "react";
 import { useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
 import Profile from "@components/Profile";
+import { fetchData } from "next-auth/client/_utils";
 
 
 const myProfile = () => {
-  const {data: session } = useSession():
-  
+  const {data: session } = useSession();
+
+  const [posts, setPosts] = useState([]);
+
+
 
   useEffect = () => {
     const fetchPosts = async () => {
@@ -19,7 +23,7 @@ const myProfile = () => {
       setPosts(data);
     }
 
-    console.log
+    fetchData();
   }
 
 
