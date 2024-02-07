@@ -7,6 +7,8 @@ import Profile from "@components/Profile";
 
 
 const myProfile = () => {
+  const {data: session } = useSession():
+  
 
   useEffect = () => {
     const fetchPosts = async () => {
